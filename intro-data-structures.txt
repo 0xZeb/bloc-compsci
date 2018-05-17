@@ -1,0 +1,51 @@
+function Queue(){
+
+  this.data = [];
+
+}
+
+
+
+Queue.prototype.enqueue = function (newElement) {
+  this.data.unshift(newElement);
+}
+
+Queue.prototype.dequeue = function () {
+  this.data.pop();
+}
+
+Queue.prototype.front = function () {
+  return this.data[0];
+}
+
+Queue.prototype.tail = function () {
+  return this.data[this.data.length - 1];
+}
+
+Queue.prototype.size = function () {
+  return this.data.length;
+}
+
+Queue.prototype.isInLine = function (searchKey) {
+  return this.data.findIndex(searchKey);
+}
+
+Queue.prototype.cuts = function(inLinePerson, friend){
+  //pseudocode prototype
+
+  isInLine //check and get index of inLinePerson
+  this.data.slice() a seperate array from that friend.
+  Enqueue friend to this.data
+  concat sliced array to this.data
+}
+
+
+Queue.prototype.leaveLine = function(personLeaving){
+  //pseudocode prototype
+
+  check if in line
+  findIndex(personLeaving)
+  move one spot to right and slice array
+  dequeue this.data //pop personLeaving from list
+  concat two arrays back together
+}
