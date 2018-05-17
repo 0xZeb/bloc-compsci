@@ -72,3 +72,16 @@ q.showLine()
 console.log(q.isInLine("ZEB"))
 q.leaveLine("Melissa")
 q.showLine()
+
+
+### Questions
+
+> 2. Provide another real-world example that you can model using a data structure.
+
+As a connoisseur of buffets, the vast majority of fine diverse eating establishments stack their plates the same. Freshest and cleanest on top,
+always are added to the top. Customers will take from the top. This is like a stack, a LIFO data structure. LIFO is where the last element in
+becomes the first element out.
+
+> 3. How would your data structure allow developers to access and manipulate the data?
+
+A stack is really good for reversing strings.
