@@ -1,24 +1,25 @@
 function Queue(){
 
-  this.data = [];
+  this.data = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
 
 }
 
+//0th element will be the tail of the line --unshift to add
+//nth element will be the head of the line --pop to remove
 
-
-Queue.prototype.enqueue = function (newElement) {
+Queue.prototype.add = function (newElement) {
   this.data.unshift(newElement);
 }
 
-Queue.prototype.dequeue = function () {
+Queue.prototype.remove = function () {
   this.data.pop();
 }
 
-Queue.prototype.front = function () {
+Queue.prototype.back = function () {
   return this.data[0];
 }
 
-Queue.prototype.tail = function () {
+Queue.prototype.front = function () {
   return this.data[this.data.length - 1];
 }
 
@@ -27,25 +28,47 @@ Queue.prototype.size = function () {
 }
 
 Queue.prototype.isInLine = function (searchKey) {
-  return this.data.findIndex(searchKey);
+
+	if( this.data.indexOf(searchKey) >= 0 ){
+      return this.data.indexOf(searchKey)
+  }
+  else
+  		return searchKey + " isn't here...";
 }
 
-Queue.prototype.cuts = function(inLinePerson, friend){
+Queue.prototype.cuts = function(cutter, friend){
   //pseudocode prototype
 
-  isInLine //check and get index of inLinePerson
-  this.data.slice() a seperate array from that friend.
-  Enqueue friend to this.data
-  concat sliced array to this.data
+  const friendIndex = this.isInLine(cutter);
+
+  this.data.splice( friendIndex + 1, 0, friend );
+  console.log("My friend " + friend + " is here!")
+
+}
+
+Queue.prototype.showLine = function(){
+  console.log("this is everyone in line: ");
+	this.data.forEach( element => console.log(element));
 }
 
 
 Queue.prototype.leaveLine = function(personLeaving){
-  //pseudocode prototype
+    const index = this.data.indexOf(personLeaving);
 
-  check if in line
-  findIndex(personLeaving)
-  move one spot to right and slice array
-  dequeue this.data //pop personLeaving from list
-  concat two arrays back together
+    if (index !== -1) {
+        this.data.splice(index, 1);
+    }
 }
+
+
+const q = new Queue();
+q.add("Mary");
+console.log("Size of array " + q.size())
+console.log("Where is Mary? " + q.isInLine("Mary"));
+console.log("Where is Mike? " + q.isInLine("Mike"));
+q.cuts("Ava", "Melissa");
+console.log("Size of array after cuts " + q.size())
+q.showLine()
+console.log(q.isInLine("ZEB"))
+q.leaveLine("Melissa")
+q.showLine()
