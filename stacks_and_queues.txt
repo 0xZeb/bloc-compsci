@@ -1,0 +1,74 @@
+Exercises
+
+1. What is the main difference between a stack and a queue?
+
+Stacks are LIFO, queue is FIFO.
+
+2. What are the similarities between stacks and queues?
+
+The methods are relatively similar, they are iterable, and they are the answer
+to specific problems in programming requiring prioritized entries.
+
+3. Imagine you are an engineer tasked with implementing the UNDO and REDO options in a word processor such as Microsoft Word. Which data structure would you use for each option and why?
+
+UNDO and REDO would require you to keep track of the last entry or command and access it relatively fast. This sounds like a LIFO stack as you would be able to recall in exact opposite order the procedures just executed.
+
+Programming Questions
+
+1. Given a string, reverse it using a stack. For example, the string "Bloc!" should be converted to "!colB".
+
+```
+
+function Stack(){
+  this.data = [];
+  this.head = this.data[0];
+}
+
+Stack.prototype.reverseString = function(item){
+  var stringified = item.split("")
+  let flipped = ""
+
+  for(let i = 0; i < stringified.length; i++){
+      this.data[i] = stringified[i];
+  }
+
+  this.head = this.data.length - 1;
+
+  for(let i = this.head; i >= 0; i--){
+    flipped += this.data[i];
+  }
+
+  console.log(flipped);
+}
+
+
+var stack = new Stack();
+
+stack.reverseString("Bloc!");
+
+
+
+```
+
+
+2. Implement the delete functionality of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure.
+
+function Queue(){
+  this.data = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+}
+
+//0th element will be the tail of the line --unshift to add
+//nth element will be the head of the line --pop to remove
+//FIFO_add will add to the front of the line: (q.length + 1)
+
+Queue.prototype.add = function (newElement) {
+  this.data.unshift(newElement);
+}
+
+Queue.prototype.remove = function () {
+  this.data.pop();
+}
+
+Queue.prototype.FIFO_add = function(newElement){
+  this.data.push(newElement);
+}

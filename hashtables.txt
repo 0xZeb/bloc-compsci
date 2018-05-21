@@ -1,0 +1,40 @@
+> 1. What is a hash table?
+
+A hash table is a data struture that stores key/value pairs. Keys may exist only once per map.
+
+> 2. What is hashing?
+
+Hashing is the process of creating a unique key  with a hash function
+
+> 3. How does a hash table store data?
+
+After encoding an unique key, the pair and key are stored in the map or hash table
+at the location corresponding to the hash code.
+
+> 4. How are hash tables and objects different?
+
+They are the same thing. Internal lookups are performed when accessing an objects methods and properties...sounds like a hash table.
+
+> 5. Determine whether you would use a hash table or an object to store each of the following pieces of data:
+    A list of pets and their unique names.
+    -Hash table
+
+    The name, age, and the birthday of your best friend.
+    -Object
+
+    The name and location of every company in a given city.
+    -Hash table
+
+    All of the books checked out from a library by a particular individual.
+    -Hash table
+
+    The primary and secondary phone numbers for a contact.
+    -Object
+
+>6. Build a system that allows a sales associate to enter a customer's name, address, and phone number into the system and look up customers using their phone numbers. Store this information in a hash table.
+
+
+
+> 7.Build a system that allows a store owner to track their store's inventory using a hash table for storage.
+
+> 8.Build a system that allows digital copies of newspapers to be entered and searched by publisher and publication date. Use hash tables to store the necessary data.
