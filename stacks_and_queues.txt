@@ -46,29 +46,50 @@ var stack = new Stack();
 
 stack.reverseString("Bloc!");
 
-
-
 ```
-
 
 2. Implement the delete functionality of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure.
 
-function Queue(){
-  this.data = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
-}
 
-//0th element will be the tail of the line --unshift to add
-//nth element will be the head of the line --pop to remove
-//FIFO_add will add to the front of the line: (q.length + 1)
+CLASS Stack
 
-Queue.prototype.add = function (newElement) {
-  this.data.unshift(newElement);
-}
+SET head to last element of queue from queue
+SET tail to first element of queue from queue
 
-Queue.prototype.remove = function () {
-  this.data.pop();
-}
+FUNCTION enqueue(element)
+  APPEND element to the end of the list
+END FUNCTION
 
-Queue.prototype.FIFO_add = function(newElement){
-  this.data.push(newElement);
-}
+FUNCTION dequeue
+  SET temp to the first element
+  REMOVE FIRST element of list from list
+  RETURN temp
+END FUNCTION
+
+
+ FUNCTION pop(queue)
+  LOOP through queue
+    IF queue.tail == queue.head
+      CALL DEQUEUE on head
+      SET head to current position -1
+      SET tail to [0]th element
+    ELSE
+      CALL enqueue on head
+
+ END FUNCTION
+END CLASS
+
+3. Fill in the methods for the following Queue class so that it will work as expected (FIFO).
+
+
+CLASS QUEUE
+ FUNCTION enqueue(element)
+    APPEND element to the end of the list
+ END FUNCTION
+
+ FUNCTION dequeue
+    SET temp to the first newElement
+    REMOVE first element of list from establishments
+    return temp
+ END FUNCTION
+END CLASS
