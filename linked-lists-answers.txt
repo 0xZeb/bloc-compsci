@@ -1,0 +1,96 @@
+#### Exercises
+
+> 1.What are some pros and cons of using linked lists instead of arrays?
+
+Linked lists are able to dynamically grow and shrink according to their needs. Arrays
+are known for allocating chunks of memory which can be quicker to retrieve data compared
+to linked lists because all the items in memory are adjacent. Due to the dynamic nature of
+linked lists, memory is not adjacent and can suffer from performance issues.
+
+> 2.Come up with a real world example of a linked list.
+
+A freight train is a great example of a doubly linked-list. Train cars, much like the nodes of a list,
+can be attached and removed individually at any point on the train. Very modular.
+
+#### Programming Questions
+
+> 1.The Linked List push function should take a value, create a node, and add it to the end of a list.
+Below is a push function for a singly linked list. However, there is something wrong with it. Find the bug and fix the code.
+
+// I think the bug is the pointer assignment in the else statement. Since the question says your adding to the end of the list
+// and not to the 'head', you would probably want a "TAIL" pointer referencing the last item to make pushing at the end easier.
+// Instead of setting the current node to head, I would change that to tail.
+
+LinkedList.prototype.push = function(element) {
+ SET node = {
+   value: element,
+   next: null
+ }
+
+ IF the head node does not exist
+   THEN SET head to node
+ ELSE
+  SET current.next to node
+  SET current node to TAIL
+
+}
+
+> 2.Given an unsorted singly linked list, remove all duplicates from the linked list.
+Example
+Input: a -> c -> d -> d -> a
+Output: a -> c -> d
+
+removeDupes(){
+
+     if(this.length === 0) {
+         return undefined;
+     }
+
+     let prevNode = this.head;
+     let thisNode = prevNode.next;
+     let testNode = thisNode;
+     let bookmark = prevNode;
+
+     while(prevNode && testNode) {  //while there is a node and test node, continue to loop...
+
+       while(testNode){  //move testNode down the list
+           if(testNode.value === prevNode.value){
+
+               //reassign the next value for bookmarked node.
+               bookmark.next = bookmark.next.next;
+               testNode = testNode.next;
+               this.length--;
+             }
+           else{
+               bookmark = bookmark.next;
+               testNode = testNode.next; //loop condition
+           }
+
+       }// end inner while
+        prevNode = thisNode;
+        bookmark = thisNode;
+        thisNode = thisNode.next;
+        testNode = thisNode;//loop condition
+
+     }//end outer while
+
+  }//end removeDupes method
+
+
+
+> 3.Given an unsorted singly linked list, reverse it.
+Example
+Input: a -> b -> c -> d
+Output: d -> c -> b -> a
+
+reverseList(){
+     let thisNode = this.head;
+     let reversedList = [];
+     while(thisNode){
+       reversedList.push(thisNode.value);
+       thisNode = thisNode.next;
+     }
+     console.log(reversedList.reverse());
+
+
+  }
