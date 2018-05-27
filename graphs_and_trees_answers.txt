@@ -1,0 +1,65 @@
+### Exercises
+> 1.What is a binary tree and what makes it unique to other trees?
+
+Binary trees are structured on each node potentially having two children nodes at most.
+
+> 2.What is a heuristic?
+
+Heuristics are estimations in algorithms that reduce accuracy while shortening time.
+
+> 3.What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+Searching algorithms can hybridize with heuristics to find best answers to eliminate
+search space to increase speed in large data sets.
+
+> 4.What is the difference between a depth-first search and a breadth-first search?
+
+DFS will explore as far down a tree as possible before backtracking. A BFS searches
+across rows before moving down to the next row of nodes.
+
+> 5.Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+A doubly-linked-list is undirected, a-cyclic, and unweighted. It does not loop,
+can move in more than one direction, and edges between nodes carry no values.
+
+> 6.What kind of graph is a binary search tree?
+
+A binary search tree is a-cyclic, directed and unweighted.
+
+### Programming Questions
+> 1.Given a Binary Search Tree and a value, write a function that checks to see whether the value exists within the tree.
+
+Example: The value 10 exists in the tree. The value 23 does not exist in the tree.
+
+// find a value
+searchTree(node, data)
+{
+    if(node === null){
+        console.log("The value " + data + " does not exist in the tree");
+    }
+    //compare and see which direction to go in the tree
+    else if(data < node.data){
+        return this.search(node.left, data);
+    }
+    // or move to other child
+    else if(data > node.data)
+        return this.search(node.right, data);
+
+    //last state, node found then return node
+    else
+        console.log("The value " + data + " exists in the tree");
+}
+
+
+> 2.Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the distance between the two nodes
+
+Example: The distance between the nodes 4 and 10 is 4.
+The distance between the nodes 8 and 10 is 1.
+The distance between the nodes 1 and 14 is 4.
+
+pathLength(n1, n2){
+
+     //BFS that counts distance from 
+
+
+}
