@@ -1,0 +1,67 @@
+#### Exercises
+
+> 1.Using proper pseudo-code, describe the following primitive algorithms:
+
+-Making Coffee
+
+Add water into machine reservoir
+Select a flavor package
+Insert flavor package into machine into center of machine
+Close lid and wait for ready to brew indicator
+Insert mug under dispenser on top of drip tray
+Select size or strength of Coffee
+Wait for coffee to finish dripping before removing mug.
+
+-Washing dishes
+Check if the dishwasher is empty
+  If still loaded and clean
+    Put dishes away before loading more
+Load utensils into utensils tray
+Put dishes on the bottom rack facing the same away
+Put cups, bowls and large tupperware on top rack upside down
+Add soap to receptical
+Close lid
+Select wash type and cycle
+Start wash
+If cycle is finished
+  Put items away properly
+
+-A choice of your following
+Charging your phone
+Plug charger into outlet.
+Plug phone into charger.
+Wait until phone at full battery.
+Remove phone from charger.
+Remove charger from wall
+
+> 2.As with the knot algorithm, there may be more than one way to solve the problem.
+It is essential to try to pick the best algorithm for a situation. Name three companies
+who created an algorithm that made them successful, e.g., Google's search algorithm.
+ It doesn't need to be a tech example (such as a recipe or manufacturing a product).
+ Google's algorithm produces more relevant results than other search engines;
+ what about each of your cases make them stand out?
+
+Successful restaurants often find success creating things in a unique way. Using their
+family recipes or proprietary trade secrets, these companies want to provide a unique experience that they can replicate.
+In-n-out burgers have been making the same single type of burger for decades. The strength is
+that it is more or less the same dining experience each time you go there and thats why people come back.
+
+Another example of a company that uses an algorithm to achieve the pinnacle of success is Ferrari.
+Hand produced cars engineered for speed and performance, this very one of a kind experience was able to find a niche to gain success.
+Compared to Henry Ford's model A or Volkswagen's mass produced car for the everyman,
+this company held on to its roots of production and can charge more for their product.
+In essence this production style has essentially created one of the brands synonymous with style and success.
+
+Amazon has the 'A9' search algorithm that has catapulted their marketplace into
+the position it is in. It works for both consumers and sellers by facilitating sales.
+Putting the products with the best margins into the consumers view sorted by customer-friendly
+sellers, has increased their traffic which has cycled into an amazing marketplace and industry.
+
+
+
+> 3.Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+When efficiency in algorithms is discussed, it often revolves around time and space complexity. Wasting time or wasting memory both
+waste potentially finite resources in certain systems. Optimization is a word that
+gets thrown around but it just means conserving resources. This is important when you
+bring scaling into the conversation.
