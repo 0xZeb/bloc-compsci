@@ -62,7 +62,7 @@ The distance between the nodes 1 and 14 is 4.
 My research into this problem has shown that in order to determine distances between nodes in one traversal, you have to find a LCA or lowest common ancestor then, using a DFS determine each nodes distance from LCA. This amount is summed for a total distance.
 
 // Helper function- you would use this method once the LCA is found.
-//assumes items exist in tree- returns distance from root
+//assumes items exist in tree- returns distance from root (can be an arbitrary Node)
 int distanceFromRoot(struct Node* root, int x)
 {
     if (root->key == x)

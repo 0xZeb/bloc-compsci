@@ -84,39 +84,36 @@ Example
 Input: a -> b -> c -> d
 Output: d -> c -> b -> a
 =======
+
+// O(n) function to remove duplicate entries in unsorted linked-list
 removeDupes(){
 
-     if(this.length === 0) {
-         return undefined;
-     }
+let current = this.head;
+let arr = [];
+let prev = this.head;
 
-     let prevNode = this.head;
-     let thisNode = prevNode.next;
-     let testNode = thisNode;
-     let bookmark = prevNode;
+while(current.next != null){
+if (arr.indexOf(current.value) == -1){
 
-     while(prevNode && testNode) {  //while there is a node and test node, continue to loop...
+    arr.push(current.value);
+}else{
+    if (prev){
+        prev.next = current.next;
+    }
+}
+prev = current;
+current  = current.next;
 
-       while(testNode){  //move testNode down the list
-           if(testNode.value === prevNode.value){
+}// end while
 
-               //reassign the next value for bookmarked node.
-               bookmark.next = bookmark.next.next;
-               testNode = testNode.next;
-               this.length--;
-             }
-           else{
-               bookmark = bookmark.next;
-               testNode = testNode.next; //loop condition
-           }
+// test for the last element in the linked list
+if (current.next == null){
+if (arr.indexOf(current.value) != -1){
+    prev.next = null;
+}
+}
 
-       }// end inner while
-        prevNode = thisNode;
-        bookmark = thisNode;
-        thisNode = thisNode.next;
-        testNode = thisNode;//loop condition
-
-     }//end outer while
+}//end method
 
   }//end removeDupes method
 
