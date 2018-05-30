@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+Exercises
+
+1. What are some pros and cons of using linked lists instead of arrays?
+
+Linked lists take performance hits because their nodes are not next to each other which is important because to access a node in the middle of a linked list,  you have to search through
+each of the previous nodes.
+
+The pros are that since the memory is independent, linked lists can grow easily in size without needing large adjacent memory blocks. Since you dont need to reserve large chunks of memory, you dont waste memory.
+
+2. Come up with a real world example of a linked list.
+
+A physical example of a linked list is a train. Each car is connected to the next and there is no way to skip ahead without going through the next car. As far as a practical example, browser history seems like a linked list of web pages. Each time you click forward or backward, you only pull up the next page. You cant skip, as you have to pass through one page at a time.
+
+Programming Questions
+
+1. The Linked List push function should take a value, create a node, and add it to the end of a list. Below is a push function for a singly linked list. However, there is something wrong with it. Find the bug and fix the code.
+
+
+LinkedList.prototype.push = function(element) {
+
+=======
 #### Exercises
 
 > 1.What are some pros and cons of using linked lists instead of arrays?
@@ -22,6 +44,7 @@ Below is a push function for a singly linked list. However, there is something w
 // Instead of setting the current node to head, I would change that to tail.
 
 LinkedList.prototype.push = function(element) {
+>>>>>>> b5b99c9dc82b4fd327079a47627a3960515efe19
  SET node = {
    value: element,
    next: null
@@ -30,49 +53,67 @@ LinkedList.prototype.push = function(element) {
  IF the head node does not exist
    THEN SET head to node
  ELSE
+<<<<<<< HEAD
+
+   SET current.next to node
+
+}
+
+
+
+2. Given an unsorted singly linked list, remove all duplicates from the linked list.
+=======
   SET current.next to node
   SET current node to TAIL
 
 }
 
 > 2.Given an unsorted singly linked list, remove all duplicates from the linked list.
+>>>>>>> b5b99c9dc82b4fd327079a47627a3960515efe19
 Example
 Input: a -> c -> d -> d -> a
 Output: a -> c -> d
 
+<<<<<<< HEAD
+
+
+
+
+3. Given an unsorted singly linked list, reverse it.
+Example
+Input: a -> b -> c -> d
+Output: d -> c -> b -> a
+=======
+
+// O(n) function to remove duplicate entries in unsorted linked-list
 removeDupes(){
 
-     if(this.length === 0) {
-         return undefined;
-     }
+let current = this.head;
+let arr = [];
+let prev = this.head;
 
-     let prevNode = this.head;
-     let thisNode = prevNode.next;
-     let testNode = thisNode;
-     let bookmark = prevNode;
+while(current.next != null){
+if (arr.indexOf(current.value) == -1){
 
-     while(prevNode && testNode) {  //while there is a node and test node, continue to loop...
+    arr.push(current.value);
+}else{
+    if (prev){
+        prev.next = current.next;
+    }
+}
+prev = current;
+current  = current.next;
 
-       while(testNode){  //move testNode down the list
-           if(testNode.value === prevNode.value){
+}// end while
 
-               //reassign the next value for bookmarked node.
-               bookmark.next = bookmark.next.next;
-               testNode = testNode.next;
-               this.length--;
-             }
-           else{
-               bookmark = bookmark.next;
-               testNode = testNode.next; //loop condition
-           }
+// test for the last element in the linked list
+if (current.next == null){
+if (arr.indexOf(current.value) != -1){
+    prev.next = null;
+}
+}
 
-       }// end inner while
-        prevNode = thisNode;
-        bookmark = thisNode;
-        thisNode = thisNode.next;
-        testNode = thisNode;//loop condition
-
-     }//end outer while
+}//end method
 
   }//end removeDupes method
 
@@ -94,3 +135,4 @@ reverseList(){
 
 
   }
+>>>>>>> b5b99c9dc82b4fd327079a47627a3960515efe19
