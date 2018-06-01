@@ -1,0 +1,32 @@
+### Short Answer
+
+> 1.What is a real-life scenario that uses linear search?
+
+Real life scenario of a linear search is looking at answers on a multiple
+choice test.
+
+> 2.What is a real-life scenario that uses binary search?
+
+Looking up words in the dictionary would be a binary search. Flip it open, if the
+word youre looking for is to the left, move left. If its to the right, move right.
+Check again and again until you find the right, then do the same thing with the word.
+
+> 3.Given the alphabetically sorted collection in this checkpoint,
+how many iterations would it take to find the value G using linear
+search?
+
+It would take 7 iterations to move to the last item in the sorted array.
+
+> 4.Given the alphabetically sorted collection in this checkpoint, how many iterations
+would it take to find the value G using binary search?
+
+It should take 3 iterations to find G.
+
+> 5.Given an unsorted collection of a million items, which algorithm would you
+ choose between linear search and binary search? Explain your reasoning.
+
+I would have no choice but to take the linear search because the array isnt sorted. 
+
+> 6.Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Since its sorted, have to choose the binary search because its more efficient given large, sorted inputs.
