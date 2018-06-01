@@ -1,0 +1,39 @@
+#### Questions
+
+> 1.Define and compare recursion and iteration.
+
+Iterating is referring to a loop to handle a process while recursion relies
+on a function calling itself over and over to take care of a process.  Recursion is
+resource intensive and should be used in specific cases. Iteration is perhaps slightly
+more complex but less resource heavy and used more frequently.
+
+> 2.Name five algorithms that are commonly implemented by recursion.
+
+Fibonacci numbers, factorial, binary search, euclids algorithm for (GCD), and Dijkstra's are
+commonly implemented by recursion.
+
+> 3.When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+Looking at time complexity of both an iterative function with linear growth O(n), vs a
+recursive function exponential O(2^n) you can see that a large n in a recursive function
+will be a poor choice. It would make sense that iteration would work in either case, but
+at a certain point the recursive implementation will have the performance tradeoff to
+make it the appropriate choice.
+
+> 4.Compare the recursive and iterative solutions to the three algorithms from the checkpoint (Factorial, Maximum, and Fibonacci). What is similar, and what is different?
+
+They all follow the recursive pattern of calling the function within the function,
+the Fibonacci function has two recursive calls per 'layer'. They each have different base cases also.
+
+> 5.Given a multi-dimensional collection (such as an array) where the
+number of dimensions is unknown, write a recursive algorithm to count
+the number of items in the entire collection.
+
+
+> 6.A palindrome is a word or phrase whose spelling is the same either
+ direction (e.g., racecar). Write a recursive algorithm to determine
+ if a given word or phrase is a palindrome.
+
+> 7.Laura and Xander are going door-to-door around their block looking
+ for their lost cat. Write a recursive algorithm showing one way they
+ can visit every house on their block exactly once.
