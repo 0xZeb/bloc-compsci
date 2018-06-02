@@ -4,35 +4,38 @@
 
 -Making Coffee
 
-Add water into machine reservoir
-Select a flavor package
-Insert flavor package into machine into center of machine
-Close lid and wait for ready to brew indicator
-Insert mug under dispenser on top of drip tray
-Select size or strength of Coffee
-Wait for coffee to finish dripping before removing mug.
+    Add water into water reservoir in machine
+    Select a flavor package
+    Insert flavor package into machine into center of machine
+    Close lid and wait for ready to brew indicator
+    Insert mug under dispenser on top of drip tray
+    Select size and strength of Coffee
+    Wait for coffee to finish dripping before removing mug.
 
 -Washing dishes
-Check if the dishwasher is empty
-  If still loaded and clean
+
+ Check if the dishwasher is empty
+  IF dishwasher is loaded with clean dishes
     Put dishes away before loading more
-Load utensils into utensils tray
-Put dishes on the bottom rack facing the same away
-Put cups, bowls and large tupperware on top rack upside down
-Add soap to receptical
-Close lid
-Select wash type and cycle
-Start wash
-If cycle is finished
-  Put items away properly
+  ELSE
+    Load utensils into utensils tray
+    Put dishes on the bottom rack facing the same away
+    Put cups, bowls and large tupperware on top rack upside down
+    Add soap to soap receptical
+    Close lid
+    Select wash type and cycle
+    Start wash
+    Put items away properly when cycle is finished
 
 -A choice of your following
+
 Charging your phone
-Plug charger into outlet.
-Plug phone into charger.
-Wait until phone at full battery.
-Remove phone from charger.
-Remove charger from wall
+
+    Plug charger into outlet.
+    Plug phone into charger.
+    Wait until phone at full battery.
+    Remove phone from charger.
+    Remove charger from wall
 
 > 2.As with the knot algorithm, there may be more than one way to solve the problem.
 It is essential to try to pick the best algorithm for a situation. Name three companies

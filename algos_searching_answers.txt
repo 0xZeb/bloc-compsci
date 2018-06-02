@@ -25,8 +25,54 @@ It should take 3 iterations to find G.
 > 5.Given an unsorted collection of a million items, which algorithm would you
  choose between linear search and binary search? Explain your reasoning.
 
-I would have no choice but to take the linear search because the array isnt sorted. 
+I would have no choice but to take the linear search because the array isnt sorted.
 
 > 6.Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
 
 Since its sorted, have to choose the binary search because its more efficient given large, sorted inputs.
+
+### Programming Assignment
+
+> 1. You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+
+var binarySearch = function(arr, key){
+	var start = 0;
+	var end = arr.length -1;
+
+	var middleIndex;
+
+	while(start <= end){
+
+		if( start === end){
+			middleIndex = start;
+		}else{
+			// end + start may overflow
+			middleIndex = Math.floor( (end - start) / 2 ) + start;
+		}
+
+		if(arr[middleIndex] === key){
+			return middleIndex;
+		}
+
+		if(key < arr[middleIndex]){
+			end = middleIndex - 1;
+		}else{
+			start = middleIndex + 1;
+		}
+	}
+
+	return -1;
+};
+
+> 2.You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+function goldfishVerify(fish){
+
+    if(fish.type === "whiteSpotted"){
+        return 1;
+    }
+    else
+      return -1;
+
+}
