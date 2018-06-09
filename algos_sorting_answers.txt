@@ -1,0 +1,49 @@
+### Exercises
+
+> 1.Write pseudocode for bubble sort.
+
+FUNCTION bubbleSort(collection)
+
+  REPEAT
+      SET swapped to false
+
+      FOR every item in the collection
+        IF an item is greater than the item that follows it THEN
+          SET store the item, that was greater, into a temporary variable
+          SET the smaller number in the camparison to the previous spot
+          SET item in temporary storage to the second location from the comparison
+          SET swapped to true to exit loop
+        END IF
+      END FOR
+  UNTIL swapped is FALSE
+
+  RETURN collection
+END FUNCTION
+
+
+> 2.Write pseudocode for quicksort
+
+FUNCTION quickSort(collection)
+
+
+    Pick a pivot point
+
+    FOR every item in the collection, compare it to the pivot point
+      IF the item is greater than the pivot point
+        move the item to the right of the pivot point,
+        pivot point shifts one index to the left.
+
+    Repeat these two steps on each unsorted sub-lists created
+
+END FUNCTION
+
+
+> 3.We talked about time complexity in a previous checkpoint, and how to get an idea
+of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+Bubblesort is O(n^2) while quick sort is O(n Log n) already showing its more time efficient. Both quicksort and mergesort are divide and conquer style algorithms so they will have advantages in worst case and average cases.
+
+> 4. All of the sorts addressed in this checkpoint are known as comparison sorts.
+Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+Bucket sorts do not compare adjacent locations. Its preferred input is non-repeating integers, the more dispersed the better.
