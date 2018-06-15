@@ -29,11 +29,59 @@ the Fibonacci function has two recursive calls per 'layer'. They each have diffe
 number of dimensions is unknown, write a recursive algorithm to count
 the number of items in the entire collection.
 
+var recCountCollection = function(mdArray, counter){
+     for( let i = 0; i < mdArray.length; i++){
+
+         if(Array.isArray(mdArray[i])){
+            counter = recCountCollection(mdArray[i], counter);
+         }else
+            counter++;
+     }
+
+  return counter;
+
+}
+
 
 > 6.A palindrome is a word or phrase whose spelling is the same either
  direction (e.g., racecar). Write a recursive algorithm to determine
  if a given word or phrase is a palindrome.
 
+ var palindromeChecker = function(word){
+
+    var length = word.length;
+
+    if(word.length === 1 || word.length === 0){
+      return true;
+    } else if(word[0] !== word[length-1]){
+      return false
+    }
+
+    return palindromeChecker(word.slice(1,-1));
+};
+
 > 7.Laura and Xander are going door-to-door around their block looking
  for their lost cat. Write a recursive algorithm showing one way they
  can visit every house on their block exactly once.
+
+ lostCat = function(housesOnStreet, streetsLeft){
+ //find cat by looking around the block exactly once
+  //check the house, `if not found, move to next house
+  //if no next house, "turn corner" to start over
+
+  for(let housesSearched = 0; housesSearched < housesOnStreet; housesSearched++ ){
+
+
+
+      if(streetsLeft > 0){
+        console.log("Streets left to search: " + streetsLeft)
+        streetsLeft--;
+        return lostCat(housesOnStreet, streetsLeft);
+      }
+
+      if(streetsLeft === 0){
+           return console.log("We didnt find em");
+      }
+  }
+
+}
